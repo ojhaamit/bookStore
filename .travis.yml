@@ -4,8 +4,10 @@ jdk:
 
 script:
   - ./gradlew check
-    
+
 deploy:
   provider: heroku
   api_key: $HEROKU_TOKEN
   app: "bookstore-demo-2022"
+  on:
+    all_branches: true
